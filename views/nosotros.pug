@@ -1,6 +1,34 @@
 extends ./layouts/index
 
 block contenido
-    p Nosotros
+    main.max-w-6xl.mx-auto
+        .flex.gap-6
+            div(class="w-1/3")
+                img(src="img/nosotros.jpg", alt ="")
+            div(class="w-2/3")
+                h1= pagina
 
-    img(src="img/cupon.jpg")
+                blockquote.mb-4 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut congue purus sit amet imperdiet vulputate. Donec tempus dui eros, non feugiat mi hendrerit non. Nullam bibendum arcu ac sapien dignissim congue. In sit amet erat sed magna sagittis ullamcorper. In pharetra vel massa sed porttitor. Proin vitae eros vitae elit pretium varius et eu dui. Integer dapibus, felis in cursus viverra, nulla est viverra eros, eget eleifend quam purus id lacus.
+
+                p.mb-4 Nullam pharetra orci nec arcu fringilla semper. Mauris facilisis risus lectus, ut faucibus ante varius tincidunt. Suspendisse elementum dui vitae sapien blandit, gravida dignissim lacus dignissim. Donec tempus, turpis vel iaculis mattis, purus mauris ultrices felis, in dapibus ex mauris at felis. Pellentesque gravida vulputate sapien.
+
+                p Sed nec faucibus lacus, nec tincidunt purus. Donec at mi ac risus feugiat bibendum id sit amet nulla. Morbi fringilla libero lacinia, iaculis nisi ac, auctor diam. Sed ultrices risus ac orci porta gravida. Proin ut fringilla dui. Nunc tristique porttitor lorem sed maximus. Vestibulum accumsan ipsum odio, vel laoreet nibh hendrerit eu. Maecenas eget facilisis nisl. Sed eu orci nisi. Duis id posuere velit. Sed venenatis scelerisque facilisis. Nullam feugiat cursus diam sit amet condimentum. Mauris et turpis eros. Vivamus ornare purus vitae ex bibendum, non vulputate neque euismod. Suspendisse quis dolor molestie quam fringilla euismod. Curabitur nisi libero, ullamcorper sed justo sit amet, maximus malesuada nisi.
+
+    .bg-gray-100
+        .max-w-6xl.mx-auto
+            .mt-5.py-10.text-center
+                .flex.gap-4
+                    div(class="flex flex-col align-center w-1/3")
+                        img(src="img/icono_seguridad.svg", alt="Icono seguridad", class="h-20 mb-4")
+                        h2.mb-4 Seguridad 
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reiciendis numquam neque ipsa nihil assumenda quae ratione eligendi, consequuntur cupiditate accusantium quaerat non iste aliquid provident, blanditiis debitis quisquam minima?
+
+                    div(class="flex flex-col align-center w-1/3")
+                        img(src="img/icono_destinos.svg", alt="Icono destinos", class="h-20 mb-4")
+                        h2.mb-4 Seguridad 
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reiciendis numquam neque ipsa nihil assumenda quae ratione eligendi, consequuntur cupiditate accusantium quaerat non iste aliquid provident, blanditiis debitis quisquam minima?
+
+                    div(class="flex flex-col align-center w-1/3")
+                        img(src="img/icono_precios.svg", alt="Icono precios", class="h-20 mb-4")
+                        h2.mb-4 Seguridad 
+                        p Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quas reiciendis numquam neque ipsa nihil assumenda quae ratione eligendi, consequuntur cupiditate accusantium quaerat non iste aliquid provident, blanditiis debitis quisquam minima?

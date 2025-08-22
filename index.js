@@ -1,7 +1,13 @@
 import express from 'express'
 import router from './routes/index.js'
+import db from './config/db.js'
 
 const app = express()
+
+// Conectar la BD
+db.authenticate()
+    .then(() => { console.log('Base de datos conectada') })
+    .catch( error => console.log(error) )
 
 // Definir puerto
 const port = process.env.PORT || 4000
@@ -12,6 +18,7 @@ app.set('view engine', 'pug')
 app.use((req, res, next) => {
     const year = new Date()
     res.locals.fecha = year.getFullYear()
+    res.locals.nombresitio = 'Agencia de Viajes'
 
     next()
 })
