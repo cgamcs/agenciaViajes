@@ -1,1 +1,12 @@
-p Desde el footer
+footer 
+    .max-w-6xl.mx-auto
+        .flex.justify-center.items-center.py-8(class='md:justify-between')        
+            nav.flex.gap-6.items-center.justify-center(class='md:justify-end')
+                a.text-xl(href="/nosotros") Nosotros
+                a.text-xl(href="/viajes") Viajes
+                a.text-xl(href="/testimoniales") Testimoniales
+
+            p.text-xl
+                | © 
+                span= fecha 
+                |  - Todos los derechos reservados

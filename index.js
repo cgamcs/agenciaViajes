@@ -9,6 +9,13 @@ const port = process.env.PORT || 4000
 // Habilitar pug
 app.set('view engine', 'pug')
 
+app.use((req, res, next) => {
+    const year = new Date()
+    res.locals.fecha = year.getFullYear()
+
+    next()
+})
+
 // Definir la carpeta publica
 app.use(express.static('public'))
 
