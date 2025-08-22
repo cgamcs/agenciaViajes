@@ -15,10 +15,11 @@ const paginaNosotros = (req, res) => {
 
 const paginaViajes = async  (req, res) => { 
     // Consultar BD 
-    // const viajes = await Viaje.findAll();
-    
+    const viajes = await Viaje.findAll();
+    console.log(viajes)
     res.render('viajes', {
-        pagina: 'Próximos Viajes'
+        pagina: 'Próximos Viajes',
+        viajes
     })
 }
 
