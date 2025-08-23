@@ -1,24 +1,24 @@
 extends ./layouts/index
 
 block contenido 
-  main.container.mt-5
-    .row
-      include ./layout/testimoniales
-      .col-md-12
+  main.max-w-6xl.mx-auto.mt-5
+    .flex.gap-4
+      include ./layouts/testimoniales
+      div(class="w-1/3")
         h2.text-center Agrega un Testimonial
         if(errores) 
           each error in errores
-            .alert.alert-danger.text-center=error.mensaje
-        .row.justify-content-center
-          .col-md-8
-            form(action="/testimoniales" method="post")
-              .form-group
+            .bg-red-600.text-center.text-white.font-semibold.rounded-lg.w-full.py-2.mb-2=error.mensaje
+        .flex.w-full
+            form(action="/testimoniales" method="post" class="w-full")
+              .flex.flex-col.gap-2.mb-4
                 label(for='nombre') Nombre
-                input#nombre.form-control(type='text', placeholder='Tu Nombre', name="nombre", value=nombre)
-              .form-group
+                input#nombre.form-control(type='text', placeholder='Tu Nombre', name="nombre", value=nombre, class="p-1 border border-gray-300 rounded-lg")
+              .flex.flex-col.gap-2.mb-4
                 label(for='correo') Correo Electrónico
-                input#correo.form-control(type='email', placeholder='Tu Correo Electrónico', name="correo", value=correo)
-              .form-group
+                input#correo.form-control(type='email', placeholder='Tu Correo Electrónico', name="correo", value=correo, class="p-1 border border-gray-300 rounded-lg")
+              .flex.flex-col.gap-2.mb-4
                 label(for='mensaje') Mensaje
-                textarea#mensaje.form-control(name="mensaje", rows=3, placeholder="Tu Mensaje", value=mensaje)
-              input.btn.btn-success.btn-block(type="submit")
+                textarea#mensaje.form-control(name="mensaje", rows=3, placeholder="Tu Mensaje", value=mensaje, class="p-1 border border-gray-300 rounded-lg")
+
+              input(type="submit", class="w-full text-center text-white bg-[#DC135F] rounded-lg py-2 hover:cursor-pointer")

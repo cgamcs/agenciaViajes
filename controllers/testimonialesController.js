@@ -1,9 +1,9 @@
-import { Testimonial } from '../models/Testimonial.js';
+import { Testimonial } from '../models/Testimonial.js'
 
-const guardarTestimonial = async (req, res)  => {
-    const { nombre, correo, mensaje } = req.body;
+export const guardarTestimonial = async (req, res)  => {
+    const { nombre, correo, mensaje } = req.body
 
-    const errores = [];
+    const errores = []
 
     if(!nombre) {
         errores.push({'mensaje': 'Agrega tu Nombre'})
@@ -16,8 +16,8 @@ const guardarTestimonial = async (req, res)  => {
     }
 
     // revisar por erroes
-    if(errores.length > 0 ){
-        const testimoniales = await Testimonial.findAll();
+    if(errores.length > 0){
+        const testimoniales = await Testimonial.findAll()
 
         // muestra la vista con errores
         res.render('testimoniales', {
@@ -27,27 +27,20 @@ const guardarTestimonial = async (req, res)  => {
             mensaje,
             testimoniales,
             pagina: 'Testimoniales'
-        });
+        })
     } else {
         // almacenalo en la BD
-
         try {
             await Testimonial.create({
                 nombre, 
                 correo,
                 mensaje
-            });
+            })
 
-            res.redirect('/testimoniales');
+            res.redirect('/testimoniales')
         } catch (error) {
-            console.log(error);
+            console.log(error)
         }
     }
 
-};
-
-
-
-export {
-    guardarTestimonial
 }
