@@ -24,10 +24,16 @@ const paginaViajes = async  (req, res) => {
 }
 
 const paginaTestimoniales =  async (req, res)  => {
-     
-    res.render('testimoniales', {
-        pagina: 'Testimoniales'
-    })
+    try {
+        const testimoniales = await Testimonial.findAll()
+
+        res.render('testimoniales', {
+            pagina: 'Testimoniales',
+            testimoniales
+        })
+    } catch (error) {
+        console.error(error)
+    }
 }
 
 // Muestra un viaje por su slug
