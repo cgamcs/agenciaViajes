@@ -9,7 +9,7 @@ router.get('/nosotros', paginaNosotros)
 
 router.get('/viajes', paginaViajes)
 
-router.get('/viaje', paginaDetalleViaje)
+router.get('/viajes/:slug', paginaDetalleViaje)
 
 router.get('/testimoniales', paginaTestimoniales)
 
