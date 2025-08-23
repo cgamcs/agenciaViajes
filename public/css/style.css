@@ -60,7 +60,7 @@ h3 {
 .home {
     position: relative;
 }
-.home .navegacion {
+.home .bg-blue-500 {
     background: transparent;
     position: absolute;
     top: 0;
