@@ -3,7 +3,8 @@ extends ./layouts/index
 block contenido 
   main.max-w-6xl.mx-auto.mt-6
     .flex.gap-4
-      include ./layouts/testimoniales
+      div(class="w-2/3")
+        include ./layouts/testimoniales
       div(class="w-1/3")
         h2.text-center Agrega un Testimonial
         if(errores) 

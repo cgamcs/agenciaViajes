@@ -1,11 +1,9 @@
-div(class="w-2/3")
-    h1.text-center #{page}
-    blockquote.text-center.mb-6 Lee sobre nuestros Clientes y sus experiencias 
-    .flex.gap-4.flex-wrap
-      each testimonial in testimoniales
-        div.flex.flex-col.bg-gray-100.p-3.rounded-lg
-            blockquote.blockquote
-            p.mb-0
-              | #{testimonial.mensaje}
-            footer.blockquote-footer
-              | #{testimonial.nombre}
+h1.text-center #{page}
+  h2.text-center.mb-6 Lee sobre nuestros Clientes y sus experiencias 
+  .grid.grid-cols-3.gap-4
+    each testimonial in testimoniales
+      div.flex.flex-col.bg-gray-100.p-3.rounded-lg.h-fit
+          p.mb-0
+            | #{testimonial.mensaje}
+          footer.blockquote-footer
+            | #{testimonial.nombre}
